@@ -14,3 +14,5 @@ export const Video = styled.video`
   object-fit: cover;
   display: block;
 `;
+
+// 조류탐지 카메라 관련 스타일
