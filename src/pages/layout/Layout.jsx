@@ -1,10 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Header from "./header/Header";
 
 const Layout = () => {
   return (
     <div>
-      <div>상단 레이아웃 헤더</div>
+      <Header />
       <Outlet />
       <div>푸터</div>
     </div>
