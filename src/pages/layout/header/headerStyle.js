@@ -4,6 +4,7 @@ import theme from "../../../styles/theme";
 
 // 헤더
 export const HeaderBody = styled.header`
+  position: fixed;
   height: 128px;
   width: 100%;
   z-index: 100;
