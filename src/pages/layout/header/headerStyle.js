@@ -8,7 +8,12 @@ export const HeaderBody = styled.header`
   height: 128px;
   width: 100%;
   z-index: 100;
-  background-color: rgb(0 0 0 / 0.8);
+  background-color: rgba(0, 0, 0, ${({ $opacity }) => $opacity * 0.8});
+  /* backdrop-filter: blur(${({ $opacity }) => $opacity * 12}px); */
+
+  transition:
+    background-color 0.15s ease,
+    backdrop-filter 0.15s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
