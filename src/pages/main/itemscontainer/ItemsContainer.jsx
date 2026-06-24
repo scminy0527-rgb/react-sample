@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as S from "./itemsContainerStyle";
 import ItemCard from "../components/ItemCard";
+import ItemsSkeleton from "../components/ItemsSkeleton";
 import { getItems } from "../../../functions/itemService";
 
 const ItemsContainer = () => {
@@ -27,23 +28,7 @@ const ItemsContainer = () => {
   }, []);
 
   if (loading) {
-    return (
-      <S.ItemsArea>
-        <S.ItemsContainerWrapper>
-          {[...Array(3)].map((_, idx) => (
-            <S.SkeletonCard key={idx}>
-              <S.SkeletonImage />
-              <S.SkeletonContent>
-                <S.SkeletonLine height="20px" width="80%" />
-                <S.SkeletonLine height="16px" width="100%" />
-                <S.SkeletonLine height="16px" width="90%" />
-                <S.SkeletonLine height="40px" width="110px" />
-              </S.SkeletonContent>
-            </S.SkeletonCard>
-          ))}
-        </S.ItemsContainerWrapper>
-      </S.ItemsArea>
-    );
+    return <ItemsSkeleton count={3} />;
   }
 
   if (error) {
