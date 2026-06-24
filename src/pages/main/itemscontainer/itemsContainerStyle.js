@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import {
+  flexCenter,
+  flexCenterColumn,
+  h9Medium,
+  h10Regular,
+} from "../../../styles/common";
 
 export const ItemsArea = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
+  ${flexCenter};
 `;
 
 export const ItemsContainerWrapper = styled.div`
@@ -16,18 +21,14 @@ export const ItemsContainerWrapper = styled.div`
 // 에러 & 로딩 상태
 export const StateContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter};
   padding: 80px 20px;
 `;
 
 export const StateContent = styled.div`
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  ${flexCenterColumn};
   gap: 16px;
-  align-items: center;
 `;
 
 export const StateIcon = styled.div`
@@ -37,14 +38,13 @@ export const StateIcon = styled.div`
 
 export const StateText = styled.p`
   margin: 0;
-  font-size: 16px;
+  ${h9Medium};
   color: #666;
-  font-weight: 500;
 `;
 
 export const StateSubText = styled.p`
   margin: 0;
-  font-size: 14px;
-  color: #999;
+  ${h10Regular};
+  color: ${({ theme }) => theme.GRAYSCALE[7]};
   line-height: 1.6;
 `;

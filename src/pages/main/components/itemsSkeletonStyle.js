@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { flexCenter } from "../../../styles/common";
 
 const shimmer = keyframes`
   0% {
@@ -11,18 +12,23 @@ const shimmer = keyframes`
 
 export const SkeletonCard = styled.div`
   width: 433px;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.card};
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
+  background-color: ${({ theme }) => theme.GRAYSCALE[0]};
 `;
 
 export const SkeletonImage = styled.div`
   width: 100%;
   height: 300px;
-  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background: linear-gradient(
+    90deg,
+    ${({ theme }) => theme.GRAYSCALE[1]} 25%,
+    ${({ theme }) => theme.GRAYSCALE[0]} 50%,
+    ${({ theme }) => theme.GRAYSCALE[1]} 75%
+  );
   background-size: 1000px 100%;
   animation: ${shimmer} 2s infinite;
 `;
@@ -37,7 +43,12 @@ export const SkeletonContent = styled.div`
 
 export const SkeletonLine = styled.div`
   height: ${(props) => props.height || "16px"};
-  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background: linear-gradient(
+    90deg,
+    ${({ theme }) => theme.GRAYSCALE[1]} 25%,
+    ${({ theme }) => theme.GRAYSCALE[0]} 50%,
+    ${({ theme }) => theme.GRAYSCALE[1]} 75%
+  );
   background-size: 1000px 100%;
   animation: ${shimmer} 2s infinite;
   border-radius: 4px;
@@ -46,8 +57,7 @@ export const SkeletonLine = styled.div`
 
 export const SkeletonWrapper = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
+  ${flexCenter};
 `;
 
 export const SkeletonContainer = styled.div`

@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { h8Bold, h10Regular, h10Medium } from "../../../styles/common";
 
 export const ItemCard = styled.div`
   width: 433px;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.card};
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.PALETTE.white};
 `;
 
 export const ImageWrapper = styled.div`
@@ -32,31 +33,28 @@ export const CardContent = styled.div`
 
 export const CardTitle = styled.h3`
   margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
+  ${h8Bold};
+  color: ${({ theme }) => theme.TEXT_COLOR.basic};
 `;
 
 export const CardDescription = styled.p`
   margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
+  ${h10Regular};
   color: #666;
 `;
 
 export const ViewMoreButton = styled.button`
   align-self: flex-start;
   padding: 10px 24px;
-  background-color: #000;
-  color: #fff;
+  background-color: ${({ theme }) => theme.PALETTE.black};
+  color: ${({ theme }) => theme.PALETTE.white};
   border: none;
   border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
+  ${h10Medium};
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #333;
+    background-color: ${({ theme }) => theme.TEXT_COLOR.basic};
   }
 `;
