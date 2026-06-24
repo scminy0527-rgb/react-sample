@@ -110,9 +110,4 @@ theme.FONT_LINE = {
   h13: "11px",
 };
 
-// 각 컨테이너의 border radius
-theme.BORDER_RADIUS = {
-  card: "8px",
-};
-
 export default theme;

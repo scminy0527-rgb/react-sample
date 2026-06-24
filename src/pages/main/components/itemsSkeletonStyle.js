@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { flexCenter } from "../../../styles/common";
+import { cardStyle } from "../../../constant/cardStyle";
 
 const shimmer = keyframes`
   0% {
@@ -12,9 +13,8 @@ const shimmer = keyframes`
 
 export const SkeletonCard = styled.div`
   width: 433px;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.card};
+  ${cardStyle};
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.GRAYSCALE[0]};

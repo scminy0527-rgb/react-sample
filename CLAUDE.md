@@ -35,6 +35,11 @@
    - **동적 접근** `${({ theme }) => theme.PALETTE.black}` 사용 (테마 변경 시 반영)
    - static import는 테마 변경이 반영되지 않으므로 금지
 
+5. Card 컴포넌트 공통 스타일
+   - `src/constant/cardStyle.js` 에서 카드 컴포넌트 공통 스타일 재사용
+   - `border-radius`, `box-shadow` 등 card UI 요소의 공통 스타일 정의
+   - 카드 스타일이 필요할 때 `import { cardStyle } from "../../../constant/cardStyle"` 후 `${cardStyle}` 형태로 사용
+
 ### 스타일 컴포넌트 Props Interpolation
 
 Props Interpolation - styled-components에서 ${} 문법으로 props를 동적 스타일 값에 전달하는 방식 사용해야함. Transient Props($ 접두사)로 DOM 오염 방지.
