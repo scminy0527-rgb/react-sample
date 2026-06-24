@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import * as S from "./mainStyle";
-import BirdCamera from "./components/BirdCamera";
+import ItemsContainer from "./itemscontainer/ItemsContainer";
 
 const TestHeight = styled.div`
   height: 1500px;
@@ -16,8 +16,8 @@ const Main = () => {
         </S.Video>
       </S.VideoContainer>
 
-      {/* 조류 ai 카메라 관련 */}
-      <BirdCamera />
+      {/* 메인 페이지 내 상품 목록 */}
+      <ItemsContainer />
 
       <TestHeight />
     </div>

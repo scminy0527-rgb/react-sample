@@ -6,6 +6,10 @@
 
 스타일은 D:\dev\workspace\react\rian\src\styles\ 디렉토리 하위에 보관되어있음
 
+텍스트는 D:\dev\workspace\react\rian\src\styles\common.js 을 참고 하여 적절한 텍스트를 골라서 쓰기
+
+컴포넌트style.js 파일 내에 있는 텍스트 스타일 사용 (스타일 컴포넌트 정의 시)
+
 ### 스타일 컴포넌트 관련
 
 Props Interpolation - styled-components에서 ${} 문법으로 props를 동적 스타일 값에 전달하는 방식 사용해야함. Transient Props($ 접두사)로 DOM 오염 방지.

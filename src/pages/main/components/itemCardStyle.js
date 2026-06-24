@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BirdCameraCard = styled.div`
+export const ItemCard = styled.div`
   width: 433px;
   border-radius: 8px;
   overflow: hidden;
@@ -16,7 +16,7 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const CameraImage = styled.img`
+export const CardImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
